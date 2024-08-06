@@ -1,7 +1,8 @@
-
 # Docker WhatsApp Firefox
 
-This repository contains a Docker configuration to run WhatsApp Web using Firefox with GUI support. It uses Xvfb to create a virtual framebuffer and X11 forwarding to display the GUI on the host machine.
+This repository contains a Docker configuration to run WhatsApp Web using Firefox with Docker container to run WhatsApp Web using Firefox with support of GUI, text copy+paste and Hebrew language.
+
+It uses Xvfb to create a virtual framebuffer and X11 forwarding to display the GUI on the host machine.
 
 ## Prerequisites
 
@@ -48,3 +49,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Ubuntu Base Image
 
 This project uses the `ubuntu:20.04` Docker image as its base. Ubuntu is a registered trademark of Canonical Ltd. Ubuntu and its components are distributed under various open-source licenses, primarily the GNU General Public License (GPL). For more information, please see the [Ubuntu License Information](https://ubuntu.com/licensing) and [Canonical's Intellectual Property Rights Policy](https://ubuntu.com/legal/intellectual-property-policy).
+
