@@ -40,7 +40,6 @@ This repository contains a Docker configuration to run WhatsApp Web using Firefo
 ## Files
 
 - `Dockerfile`: Contains the instructions to build the Docker image.
-- `entrypoint.sh`: Script to set up and run the necessary services inside the container.
 
 ## License
 
