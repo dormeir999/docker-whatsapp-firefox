@@ -1,8 +1,10 @@
 # Docker WhatsApp Firefox
 
-This repository contains a Docker configuration to run WhatsApp Web using Firefox with Docker container to run WhatsApp Web using Firefox with support of GUI, text copy+paste and Hebrew language.
+This repository contains a Docker configuration to run WhatsApp Web using Firefox with support of GUI, text copy+paste and Hebrew language.
 
 It uses Xvfb to create a virtual framebuffer and X11 forwarding to display the GUI on the host machine.
+
+![img.png](img.png)
 
 ## Prerequisites
 
@@ -19,21 +21,13 @@ It uses Xvfb to create a virtual framebuffer and X11 forwarding to display the G
 
 2. **Start Xming**:
    - Download and install Xming from the [official website](https://sourceforge.net/projects/xming/).
-   - Create a configuration file `config.xlaunch` with the following content:
-     ```text
-     ! Display to listen to
-     :0
-
-     ! Allow connections from localhost
-     -ac
-     ```
-   - Double-click the `config.xlaunch` file to start Xming with the appropriate settings.
    - Ensure the Xming icon appears in the system tray (near the clock).
 
 3. **Run the Docker Container**:
 
    ```sh
-   docker run -it --rm -e DISPLAY=localhost:0.0 -v "C:\Users\YOUR_USERNAME\Downloads":/home/user/host_downloads whatsapp-firefox-docker
+   
+   docker run -it -e DISPLAY=host.docker.internal:0 -v "C:\Users\YOUR_USERNAME\Downloads":/home/user/pdfs -v "C:\Users\YOUR_USERNAME\firefox-profile":/home/user/.mozilla/firefox whatsapp-pdf-docker
    ```
 
    Replace `YOUR_USERNAME` with your actual Windows username.
